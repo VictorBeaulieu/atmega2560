@@ -15,19 +15,19 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
   5 .debug_aranges 000000d8  00000000  00000000  00000c18  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_info   0000156c  00000000  00000000  00000cf0  2**0
+  6 .debug_info   00001573  00000000  00000000  00000cf0  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 00000d7b  00000000  00000000  0000225c  2**0
+  7 .debug_abbrev 00000d7b  00000000  00000000  00002263  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   00000ac0  00000000  00000000  00002fd7  2**0
+  8 .debug_line   00000ac0  00000000  00000000  00002fde  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_frame  000002d8  00000000  00000000  00003a98  2**2
+  9 .debug_frame  000002d8  00000000  00000000  00003aa0  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    00000796  00000000  00000000  00003d70  2**0
+ 10 .debug_str    00000796  00000000  00000000  00003d78  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    00001064  00000000  00000000  00004506  2**0
+ 11 .debug_loc    00001064  00000000  00000000  0000450e  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 000000b8  00000000  00000000  0000556a  2**0
+ 12 .debug_ranges 000000b8  00000000  00000000  00005572  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -193,8 +193,8 @@ Disassembly of section .text:
  122:	6e cf       	rjmp	.-292    	; 0x0 <__vectors>
 
 00000124 <main>:
-#include "usart.h"
-#include <string.h>
+#include <stdio.h>
+
 
 int main(void)
 {
@@ -239,7 +239,7 @@ int main(void)
  15e:	8b e4       	ldi	r24, 0x4B	; 75
  160:	92 e0       	ldi	r25, 0x02	; 2
  162:	42 d3       	rcall	.+1668   	; 0x7e8 <send_string_usart3>
-
+	
 	while (1)
 	{
 		if(RX0_msg_complete == TRUE)

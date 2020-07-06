@@ -35,6 +35,39 @@ Discarded input sections
 
  .data          0x00000000        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.351/gcc/dev/atmega2560/avr6/crtatmega2560.o
  .bss           0x00000000        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.351/gcc/dev/atmega2560/avr6/crtatmega2560.o
+ .text          0x00000000        0x0 i2c.o
+ .data          0x00000000        0x0 i2c.o
+ .bss           0x00000000        0x0 i2c.o
+ .text.i2c_init
+                0x00000000        0x8 i2c.o
+ .text.i2c_start
+                0x00000000       0x4a i2c.o
+ .text.i2c_write
+                0x00000000       0x24 i2c.o
+ .text.i2c_read_ack
+                0x00000000       0x16 i2c.o
+ .text.i2c_read_nack
+                0x00000000       0x16 i2c.o
+ .text.i2c_transmit
+                0x00000000       0x5c i2c.o
+ .text.i2c_receive
+                0x00000000       0x6c i2c.o
+ .text.i2c_writeReg
+                0x00000000       0x64 i2c.o
+ .text.i2c_readReg
+                0x00000000       0x86 i2c.o
+ .text.i2c_stop
+                0x00000000        0x8 i2c.o
+ .debug_info    0x00000000      0x3fe i2c.o
+ .debug_abbrev  0x00000000      0x14c i2c.o
+ .debug_loc     0x00000000      0x6b8 i2c.o
+ .debug_aranges
+                0x00000000       0x68 i2c.o
+ .debug_ranges  0x00000000       0x88 i2c.o
+ .debug_line    0x00000000      0x30c i2c.o
+ .debug_str     0x00000000      0x218 i2c.o
+ .comment       0x00000000       0x31 i2c.o
+ .debug_frame   0x00000000      0x15c i2c.o
  .text          0x00000000        0x0 main.o
  .data          0x00000000        0x0 main.o
  .bss           0x00000000        0x0 main.o
@@ -170,6 +203,7 @@ Linker script and memory map
 
 Address of section .data set to 0x800200
 LOAD C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.351/gcc/dev/atmega2560/avr6/crtatmega2560.o
+LOAD i2c.o
 LOAD main.o
 LOAD usart.o
 START GROUP
@@ -598,11 +632,11 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x156c
+.debug_info     0x00000000     0x1573
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0xbbc C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.351/gcc/dev/atmega2560/avr6/crtatmega2560.o
- .debug_info    0x00000bbc      0x3d3 main.o
- .debug_info    0x00000f8f      0x5dd usart.o
+ .debug_info    0x00000bbc      0x3da main.o
+ .debug_info    0x00000f96      0x5dd usart.o
 
 .debug_abbrev   0x00000000      0xd7b
  *(.debug_abbrev)
@@ -625,7 +659,7 @@ END GROUP
  *(.debug_str)
  .debug_str     0x00000000      0x3e6 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.4.351/gcc/dev/atmega2560/avr6/crtatmega2560.o
  .debug_str     0x000003e6      0x2b9 main.o
-                                0x2ed (size before relaxing)
+                                0x2f2 (size before relaxing)
  .debug_str     0x0000069f       0xf7 usart.o
                                 0x388 (size before relaxing)
 

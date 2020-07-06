@@ -9,7 +9,9 @@
 #include <avr/io.h>
 #include <util/delay.h>
 #include "usart.h"
-#include <string.h>
+#include "i2c.h"
+#include <stdio.h>
+
 
 int main(void)
 {
@@ -22,7 +24,7 @@ int main(void)
 	send_string_usart1((unsigned char*)"hello world from uart1\r\n");
 	send_string_usart2((unsigned char*)"hello world from uart2\r\n");
 	send_string_usart3((unsigned char*)"hello world from uart3\r\n");
-
+	
 	while (1)
 	{
 		if(RX0_msg_complete == TRUE)

@@ -5,6 +5,10 @@
  *  Author: VictorBeaulieu
  */ 
 
+
+#ifndef USART_H_
+#define USART_H_
+
 #define CLOCK 16000000
 #define RX_BUFFER 128
 
@@ -57,3 +61,4 @@ void read_string_usart2(unsigned char *str);
 void read_string_usart3(unsigned char *str);
 
 
+#endif
